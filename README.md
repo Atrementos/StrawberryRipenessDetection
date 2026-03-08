@@ -88,32 +88,6 @@ Final test metrics for **YOLO26s**:
 
 In these experiments, **YOLO26s outperformed YOLOv8s** on all reported test metrics, including precision, recall, mAP@50, and mAP@50-95.
 
-## Project Structure
-
-A typical project layout after running the notebook looks like this:
-
-```text
-.
-├── strawberrydetectionbaselinev1.ipynb
-├── requirements.txt
-├── README.md
-├── split_original/
-│   ├── dataset.yaml
-│   ├── data_final.yaml
-│   ├── images/
-│   │   ├── train/
-│   │   ├── val/
-│   │   └── test/
-│   └── labels/
-│       ├── train/
-│       ├── val/
-│       └── test/
-└── runs/
-    ├── grid_search/
-    ├── yolov8s_final/
-    └── yolo26s_final/
-```
-
 ## Requirements
 
 Install dependencies with:
@@ -126,7 +100,7 @@ If you are using a GPU, install a PyTorch build that matches your CUDA version f
 
 ## Dataset Format Assumptions
 
-The notebook expects the source dataset to already exist in a YOLO-style layout such as:
+The notebook expects that dataset directory is in the same folder with the its original structure:
 
 ```text
 all/
@@ -135,44 +109,6 @@ all/
 └── labels/
     ├── *.txt
 ```
-
-Each label file is expected to contain class IDs and annotation coordinates in YOLO format. The notebook supports:
-
-- standard YOLO bounding box labels
-- polygon-style annotations that are converted to tight bounding boxes for visualization
-
-## What the Notebook Does
-
-### 1. Load the dataset
-
-The notebook reads images and labels from the source dataset directory.
-
-### 2. Create a stratified split
-
-It performs a **multilabel stratified split** into train, validation, and test subsets.
-
-### 3. Generate YOLO YAML files
-
-It creates configuration files used by Ultralytics for training and evaluation.
-
-### 4. Inspect class distributions
-
-It summarizes bounding box counts per split to verify that the dataset partitioning is reasonable.
-
-### 5. Run augmentation experiments
-
-It evaluates multiple hue-jitter values to compare validation mAP@50.
-
-### 6. Train final models
-
-It trains and evaluates:
-
-- **YOLOv8s**
-- **YOLO26s**
-
-### 7. Visualize predictions
-
-It compares ground-truth validation annotations with model predictions side by side.
 
 ## Running the Notebook
 
