@@ -1,0 +1,12 @@
+# data
+all/
+split_original/
+
+# training outputs
+runs/
+
+# notebook/cache noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,11 @@
+numpy
+pandas
+PyYAML
+matplotlib
+opencv-python
+ultralytics
+torch
+torchvision
+iterative-stratification
+jupyter
+notebook
