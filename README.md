@@ -23,6 +23,7 @@ The notebook includes:
 - side-by-side validation visualization of ground truth vs predictions
 
 ## Dataset
+We used Multi-Class Strawberry Ripeness Detection Dataset from mahyeks which is available at [Kaggle](https://www.kaggle.com/datasets/mahyeks/multi-class-strawberry-ripeness-detection-dataset).
 
 The dataset is split into three subsets:
 
