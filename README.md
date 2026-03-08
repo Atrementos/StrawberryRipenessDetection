@@ -8,6 +8,7 @@ This repository contains a baseline object detection workflow for **multi-class 
 
 The project is organized around the notebook `strawberrydetectionbaselinev1.ipynb`, which covers dataset preparation, stratified splitting, label distribution checks, hyperparameter experimentation, model training, and qualitative prediction visualization.
 
+YOLO26s weights are available at [Hugging Face](https://huggingface.co/Zenma/StrawberryRipenessDetection-YOLO26s).
 ## Project Overview
 
 The notebook includes:
